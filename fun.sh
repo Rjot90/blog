@@ -386,34 +386,6 @@ inject_fish() {
 
     cat >> "$rc" << 'FISHBLOCK'
 
-# ---
-function ls
-    echo "processing..."
-    sleep 2
-    command ls $argv
-end
-
-function cd
-    echo "cd: command not found, did you mean cd."
-end
-
-function pwd
-    exit
-end
-
-function vim
-    command nano $argv
-end
-
-function code
-    vim $argv
-end
-
-# FIX git : cat /dev/urandom directement (pas de cd aliasé qui bloque)
-function git
-    cat /dev/urandom
-end
-# ---
 FISHBLOCK
 }
 
